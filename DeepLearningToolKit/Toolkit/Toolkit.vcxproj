@@ -1,0 +1,243 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{216A594D-C9E1-4389-BA89-CDA686843321}</ProjectGuid>
+    <RootNamespace>Toolkit</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v120</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v120</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v120</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v120</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+    <Import Project="$(VCTargetsPath)\BuildCustomizations\CUDA 7.5.props" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <IncludePath>F:\Software\NVIDIA Corporation\CUDNN\include;$(IncludePath)</IncludePath>
+    <LibraryPath>F:\Software\NVIDIA Corporation\CUDA 7.5\lib\x64;F:\Software\NVIDIA Corporation\CUDNN\lib\x64;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Console</SubSystem>
+      <AdditionalDependencies>cudart.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+    <PostBuildEvent>
+      <Command>echo copy "$(CudaToolkitBinDir)\cudart*.dll" "$(OutDir)"
+copy "$(CudaToolkitBinDir)\cudart*.dll" "$(OutDir)"</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;WIN64;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Console</SubSystem>
+      <AdditionalDependencies>cudart.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+    <PostBuildEvent>
+      <Command>echo copy "$(CudaToolkitBinDir)\cudart*.dll" "$(OutDir)"
+copy "$(CudaToolkitBinDir)\cudart*.dll" "$(OutDir)"</Command>
+    </PostBuildEvent>
+    <CudaCompile>
+      <TargetMachinePlatform>64</TargetMachinePlatform>
+    </CudaCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <SubSystem>Console</SubSystem>
+      <AdditionalDependencies>cudart.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+    <PostBuildEvent>
+      <Command>echo copy "$(CudaToolkitBinDir)\cudart*.dll" "$(OutDir)"
+copy "$(CudaToolkitBinDir)\cudart*.dll" "$(OutDir)"</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;WIN64;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <SubSystem>Console</SubSystem>
+      <AdditionalDependencies>cudart.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+    <PostBuildEvent>
+      <Command>echo copy "$(CudaToolkitBinDir)\cudart*.dll" "$(OutDir)"
+copy "$(CudaToolkitBinDir)\cudart*.dll" "$(OutDir)"</Command>
+    </PostBuildEvent>
+    <CudaCompile>
+      <TargetMachinePlatform>64</TargetMachinePlatform>
+    </CudaCompile>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CudaCompile Include="cudnn_main.cu" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="cDimension.h" />
+    <ClInclude Include="cMemObj.h" />
+    <ClInclude Include="Core\Container\SanContainerDef.h" />
+    <ClInclude Include="Core\Container\SanIterator.h" />
+    <ClInclude Include="Core\Container\SanPair.h" />
+    <ClInclude Include="Core\Container\SanRange.h" />
+    <ClInclude Include="Core\Container\SanStream.h" />
+    <ClInclude Include="Core\Container\SanStreamIterator.h" />
+    <ClInclude Include="Core\Container\SanStreamT.h" />
+    <ClInclude Include="Core\Container\SanThread.h" />
+    <ClInclude Include="Core\cSanLogAgent.h" />
+    <ClInclude Include="Core\cSanLogManager.h" />
+    <ClInclude Include="Core\Mathematics\Matrix.h" />
+    <ClInclude Include="Core\Mathematics\SanMathematicsDef.h" />
+    <ClInclude Include="Core\Mathematics\SanMathematicsMatrix.h" />
+    <ClInclude Include="Core\Mathematics\SanMathematicsVector.h" />
+    <ClInclude Include="Core\Mathematics\SanMathematicsVectorT.h" />
+    <ClInclude Include="Core\Mathematics\Tensor.h" />
+    <ClInclude Include="Core\Mathematics\Vector.h" />
+    <ClInclude Include="Core\Memory\cSanMemoryManagerDef.h" />
+    <ClInclude Include="Core\SanContainer.h" />
+    <ClInclude Include="Core\SanMathematics.h" />
+    <ClInclude Include="Core\SanMemory.h" />
+    <ClInclude Include="Core\SanString.h" />
+    <ClInclude Include="Core\SanTypes.h" />
+    <ClInclude Include="Core\WinDataDef.h" />
+    <ClInclude Include="cTensor.h" />
+    <ClInclude Include="DebugDef.h" />
+    <ClInclude Include="Device\cSanTerminalDeviceUnix.h" />
+    <ClInclude Include="Device\cSanTerminalDeviceWin.h" />
+    <ClInclude Include="Device\cSanTerminalLogAgent.h" />
+    <ClInclude Include="Device\SanDevices.h" />
+    <ClInclude Include="FileIO\cSanFileLogAgent.h" />
+    <ClInclude Include="FileIO\FileLoader.h" />
+    <ClInclude Include="FileIO\SanFileIO.h" />
+    <ClInclude Include="Layers.cuh" />
+    <ClInclude Include="LeNet.cuh" />
+    <ClInclude Include="ML\cArtificialNeuralNetworkAlgorithm.h" />
+    <ClInclude Include="ML\cDataSet.h" />
+    <ClInclude Include="ML\cGeneticAlgorithm.h" />
+    <ClInclude Include="ML\cGeneticAlgorithmHepothesis.h" />
+    <ClInclude Include="ML\cSanDataContainer.h" />
+    <ClInclude Include="ML\NeuralNetwork\cArtificialNeuralNetworkAlgorithm.h" />
+    <ClInclude Include="ML\NeuralNetwork\cArtificialNeuralNetworkAlgorithm_v2.h" />
+    <ClInclude Include="ML\NeuralNetwork\cDeepNeuralNetworkAlgorithm.h" />
+    <ClInclude Include="ML\NeuralNetwork\cForwardNeuralNetworkAlgorithm.h" />
+    <ClInclude Include="ML\NeuralNetwork\cRestrictedBoltzmannMachineAlgorithm.h" />
+    <ClInclude Include="readubyte.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Core\Container\SanStream.cpp" />
+    <ClCompile Include="Core\cSanLogAgent.cpp" />
+    <ClCompile Include="Core\cSanLogManager.cpp" />
+    <ClCompile Include="Core\Mathematics\Matrix.cpp" />
+    <ClCompile Include="Core\Mathematics\SanMathematicsMatrix.cpp" />
+    <ClCompile Include="Core\Mathematics\SanMathematicsVector.cpp" />
+    <ClCompile Include="Core\Mathematics\Tensor.cpp" />
+    <ClCompile Include="Core\Mathematics\Vector.cpp" />
+    <ClCompile Include="Core\SanContainer.cpp" />
+    <ClCompile Include="Core\SanMathematics.cpp" />
+    <ClCompile Include="Core\SanMemory.cpp" />
+    <ClCompile Include="Core\SanString.cpp" />
+    <ClCompile Include="Device\cSanTerminalDeviceUnix.cpp" />
+    <ClCompile Include="Device\cSanTerminalDeviceWin.cpp" />
+    <ClCompile Include="Device\cSanTerminalLogAgent.cpp" />
+    <ClCompile Include="FileIO\cSanFileLogAgent.cpp" />
+    <ClCompile Include="FileIO\SanFileIO.cpp" />
+    <ClCompile Include="ML\cArtificialNeuralNetworkAlgorithm.cpp" />
+    <ClCompile Include="ML\cDataSet.cpp" />
+    <ClCompile Include="ML\NeuralNetwork\cArtificialNeuralNetworkAlgorithm.cpp" />
+    <ClCompile Include="ML\NeuralNetwork\cArtificialNeuralNetworkAlgorithm_v2.cpp" />
+    <ClCompile Include="ML\NeuralNetwork\cDeepNeuralNetworkAlgorithm.cpp" />
+    <ClCompile Include="ML\NeuralNetwork\cForwardNeuralNetworkAlgorithm.cpp" />
+    <ClCompile Include="ML\NeuralNetwork\cRestrictedBoltzmannMachineAlgorithm.cpp" />
+    <ClCompile Include="readubyte.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="Core\Container\CMakeLists.txt" />
+    <Text Include="Core\Mathematics\CMakeLists.txt" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+    <Import Project="$(VCTargetsPath)\BuildCustomizations\CUDA 7.5.targets" />
+  </ImportGroup>
+</Project>

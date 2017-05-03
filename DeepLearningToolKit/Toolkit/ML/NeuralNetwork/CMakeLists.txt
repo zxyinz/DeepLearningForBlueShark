@@ -1,0 +1,41 @@
+### ML/NeuralNetwork CMakeLists
+
+include_directories("Node")
+add_subdirectory("Node")
+
+#include_directories("Layer")
+#add_subdirectory("Layer")
+
+### Lib file
+# ANN
+add_library(cArtificialNeuralNetworkAlgorithm STATIC cArtificialNeuralNetworkAlgorithm.h cArtificialNeuralNetworkAlgorithm.cpp)
+set_target_properties(cArtificialNeuralNetworkAlgorithm PROPERTIES LINKER_LANGUAGE CXX)
+
+add_library(cArtificialNeuralNetworkAlgorithm_v2 STATIC cArtificialNeuralNetworkAlgorithm_v2.h cArtificialNeuralNetworkAlgorithm_v2.cpp)
+set_target_properties(cArtificialNeuralNetworkAlgorithm_v2 PROPERTIES LINKER_LANGUAGE CXX)
+
+# RBM & DNN
+add_library(cRestrictedBoltzmannMachineAlgorithm STATIC cRestrictedBoltzmannMachineAlgorithm.h cRestrictedBoltzmannMachineAlgorithm.cpp)
+set_target_properties(cRestrictedBoltzmannMachineAlgorithm PROPERTIES LINKER_LANGUAGE CXX)
+
+add_library(cDeepNeuralNetworkAlgorithm STATIC cDeepNeuralNetworkAlgorithm.h cDeepNeuralNetworkAlgorithm.cpp)
+set_target_properties(cDeepNeuralNetworkAlgorithm PROPERTIES LINKER_LANGUAGE CXX)
+
+# CNN
+#add_library(cConvolutionalNeuralNetworkAlgorithm STATIC cConvolutionalNeuralNetworkAlgorithm.h cConvolutionalNeuralNetworkAlgorithm.cpp)
+#set_target_properties(cConvolutionalNeuralNetworkAlgorithm PROPERTIES LINKER_LANGUAGE CXX)
+
+target_link_libraries(cArtificialNeuralNetworkAlgorithm SanMathematics)
+target_link_libraries(cArtificialNeuralNetworkAlgorithm SanContainer)
+target_link_libraries(cArtificialNeuralNetworkAlgorithm MachineLearningDataTypeDef)
+
+target_link_libraries(cArtificialNeuralNetworkAlgorithm_v2 cArtificialNeuralNetworkAlgorithm)
+
+target_link_libraries(cRestrictedBoltzmannMachineAlgorithm SanMathematics SanContainer MachineLearningDataTypeDef)
+
+target_link_libraries(cDeepNeuralNetworkAlgorithm SanMathematics)
+target_link_libraries(cDeepNeuralNetworkAlgorithm cArtificialNeuralNetworkAlgorithm_v2 cRestrictedBoltzmannMachineAlgorithm)
+
+#target_link_libraries(cConvolutionalNeuralNetworkAlgorithm cArtificialNeuralNetworkAlgorithm_v2)
+#target_link_libraries(cConvolutionalNeuralNetworkAlgorithm cNeuralNode)
+#target_link_libraries(cConvolutionalNeuralNetworkAlgorithm cSigmoidNode)

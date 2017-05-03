@@ -1,0 +1,298 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <CudaCompile Include="cudnn_main.cu">
+      <Filter>Source Files</Filter>
+    </CudaCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{30fb6e2e-5f25-457f-9f6e-b73f0c14d64a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4a24d68d-50e1-4fd2-bbeb-055c9095969e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Core">
+      <UniqueIdentifier>{56144786-ef0f-428b-a402-bbb2bab7661e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Core">
+      <UniqueIdentifier>{0830aafe-fbc1-40c4-9013-fd6b06b91d8f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Core\Container">
+      <UniqueIdentifier>{cf6a4d21-cc8a-42f8-ac7f-4ce8c07f730c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Core\Container">
+      <UniqueIdentifier>{93e9113b-e182-4c1c-8035-da8b3303349a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Core\Mathematics">
+      <UniqueIdentifier>{5cae7cb4-ccc0-4ef7-9869-b516c70e9065}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Core\Mathematics">
+      <UniqueIdentifier>{d2b8309d-997b-4baa-8fdb-8029954fa468}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Core\Memory">
+      <UniqueIdentifier>{caec98f9-0c81-4116-b804-498f8753283f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\FileIO">
+      <UniqueIdentifier>{fc441490-998c-4145-ac1b-c7675b68479e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\FileIO">
+      <UniqueIdentifier>{5bafd63a-603a-40fe-ad0c-19e6c5ead261}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Device">
+      <UniqueIdentifier>{84f4aeb5-5552-4252-a10a-d9f30c629ff2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Device">
+      <UniqueIdentifier>{3f19a1b1-3b6f-4509-ba90-47c58766041b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\ML">
+      <UniqueIdentifier>{fd95a45f-acb9-4e00-9b82-2f56249764d1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\ML">
+      <UniqueIdentifier>{ccd5cb0b-5169-4c9d-91c4-20dbd96d77d3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\ML\NeuralNetwork">
+      <UniqueIdentifier>{7584c56d-5a42-4bd8-80e2-19988d3efa70}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\ML\NeuralNetwork">
+      <UniqueIdentifier>{fe10b1d2-0357-43b1-bea2-a81b02d82517}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\ML\NeuralNetwork\Layer">
+      <UniqueIdentifier>{862485f2-1610-4a40-a4c7-d2f1459db818}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\ML\NeuralNetwork\Layer">
+      <UniqueIdentifier>{4766b186-b8d6-4f6a-816e-75b184ac1f8d}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="cDimension.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="cMemObj.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="cTensor.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DebugDef.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="readubyte.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Layers.cuh">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="LeNet.cuh">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\Mathematics\Matrix.h">
+      <Filter>Header Files\Core\Mathematics</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\Mathematics\SanMathematicsDef.h">
+      <Filter>Header Files\Core\Mathematics</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\Mathematics\SanMathematicsMatrix.h">
+      <Filter>Header Files\Core\Mathematics</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\Mathematics\SanMathematicsVector.h">
+      <Filter>Header Files\Core\Mathematics</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\Mathematics\SanMathematicsVectorT.h">
+      <Filter>Header Files\Core\Mathematics</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\Mathematics\Tensor.h">
+      <Filter>Header Files\Core\Mathematics</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\Mathematics\Vector.h">
+      <Filter>Header Files\Core\Mathematics</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\Memory\cSanMemoryManagerDef.h">
+      <Filter>Header Files\Core\Memory</Filter>
+    </ClInclude>
+    <ClInclude Include="FileIO\FileLoader.h">
+      <Filter>Header Files\FileIO</Filter>
+    </ClInclude>
+    <ClInclude Include="FileIO\SanFileIO.h">
+      <Filter>Header Files\FileIO</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\Container\SanContainerDef.h">
+      <Filter>Header Files\Core\Container</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\Container\SanIterator.h">
+      <Filter>Header Files\Core\Container</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\Container\SanPair.h">
+      <Filter>Header Files\Core\Container</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\Container\SanRange.h">
+      <Filter>Header Files\Core\Container</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\Container\SanStream.h">
+      <Filter>Header Files\Core\Container</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\Container\SanStreamIterator.h">
+      <Filter>Header Files\Core\Container</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\Container\SanStreamT.h">
+      <Filter>Header Files\Core\Container</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\Container\SanThread.h">
+      <Filter>Header Files\Core\Container</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\cSanLogAgent.h">
+      <Filter>Header Files\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\cSanLogManager.h">
+      <Filter>Header Files\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\SanContainer.h">
+      <Filter>Header Files\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\SanMathematics.h">
+      <Filter>Header Files\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\SanMemory.h">
+      <Filter>Header Files\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\SanString.h">
+      <Filter>Header Files\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\SanTypes.h">
+      <Filter>Header Files\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\WinDataDef.h">
+      <Filter>Header Files\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="FileIO\cSanFileLogAgent.h">
+      <Filter>Header Files\FileIO</Filter>
+    </ClInclude>
+    <ClInclude Include="Device\cSanTerminalDeviceUnix.h">
+      <Filter>Header Files\Device</Filter>
+    </ClInclude>
+    <ClInclude Include="Device\cSanTerminalDeviceWin.h">
+      <Filter>Header Files\Device</Filter>
+    </ClInclude>
+    <ClInclude Include="Device\cSanTerminalLogAgent.h">
+      <Filter>Header Files\Device</Filter>
+    </ClInclude>
+    <ClInclude Include="Device\SanDevices.h">
+      <Filter>Header Files\Device</Filter>
+    </ClInclude>
+    <ClInclude Include="ML\cArtificialNeuralNetworkAlgorithm.h">
+      <Filter>Header Files\ML</Filter>
+    </ClInclude>
+    <ClInclude Include="ML\cDataSet.h">
+      <Filter>Header Files\ML</Filter>
+    </ClInclude>
+    <ClInclude Include="ML\cGeneticAlgorithm.h">
+      <Filter>Header Files\ML</Filter>
+    </ClInclude>
+    <ClInclude Include="ML\cGeneticAlgorithmHepothesis.h">
+      <Filter>Header Files\ML</Filter>
+    </ClInclude>
+    <ClInclude Include="ML\cSanDataContainer.h">
+      <Filter>Header Files\ML</Filter>
+    </ClInclude>
+    <ClInclude Include="ML\NeuralNetwork\cArtificialNeuralNetworkAlgorithm.h">
+      <Filter>Header Files\ML\NeuralNetwork</Filter>
+    </ClInclude>
+    <ClInclude Include="ML\NeuralNetwork\cArtificialNeuralNetworkAlgorithm_v2.h">
+      <Filter>Header Files\ML\NeuralNetwork</Filter>
+    </ClInclude>
+    <ClInclude Include="ML\NeuralNetwork\cDeepNeuralNetworkAlgorithm.h">
+      <Filter>Header Files\ML\NeuralNetwork</Filter>
+    </ClInclude>
+    <ClInclude Include="ML\NeuralNetwork\cForwardNeuralNetworkAlgorithm.h">
+      <Filter>Header Files\ML\NeuralNetwork</Filter>
+    </ClInclude>
+    <ClInclude Include="ML\NeuralNetwork\cRestrictedBoltzmannMachineAlgorithm.h">
+      <Filter>Header Files\ML\NeuralNetwork</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="readubyte.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Core\Container\SanStream.cpp">
+      <Filter>Source Files\Core\Container</Filter>
+    </ClCompile>
+    <ClCompile Include="Core\Mathematics\Matrix.cpp">
+      <Filter>Source Files\Core\Mathematics</Filter>
+    </ClCompile>
+    <ClCompile Include="Core\Mathematics\SanMathematicsMatrix.cpp">
+      <Filter>Source Files\Core\Mathematics</Filter>
+    </ClCompile>
+    <ClCompile Include="Core\Mathematics\SanMathematicsVector.cpp">
+      <Filter>Source Files\Core\Mathematics</Filter>
+    </ClCompile>
+    <ClCompile Include="Core\Mathematics\Tensor.cpp">
+      <Filter>Source Files\Core\Mathematics</Filter>
+    </ClCompile>
+    <ClCompile Include="Core\Mathematics\Vector.cpp">
+      <Filter>Source Files\Core\Mathematics</Filter>
+    </ClCompile>
+    <ClCompile Include="FileIO\SanFileIO.cpp">
+      <Filter>Source Files\FileIO</Filter>
+    </ClCompile>
+    <ClCompile Include="Core\cSanLogAgent.cpp">
+      <Filter>Source Files\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="Core\cSanLogManager.cpp">
+      <Filter>Source Files\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="Core\SanContainer.cpp">
+      <Filter>Source Files\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="Core\SanMathematics.cpp">
+      <Filter>Source Files\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="Core\SanMemory.cpp">
+      <Filter>Source Files\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="Core\SanString.cpp">
+      <Filter>Source Files\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="FileIO\cSanFileLogAgent.cpp">
+      <Filter>Source Files\FileIO</Filter>
+    </ClCompile>
+    <ClCompile Include="Device\cSanTerminalDeviceUnix.cpp">
+      <Filter>Source Files\Device</Filter>
+    </ClCompile>
+    <ClCompile Include="Device\cSanTerminalDeviceWin.cpp">
+      <Filter>Source Files\Device</Filter>
+    </ClCompile>
+    <ClCompile Include="Device\cSanTerminalLogAgent.cpp">
+      <Filter>Source Files\Device</Filter>
+    </ClCompile>
+    <ClCompile Include="ML\cArtificialNeuralNetworkAlgorithm.cpp">
+      <Filter>Source Files\ML</Filter>
+    </ClCompile>
+    <ClCompile Include="ML\cDataSet.cpp">
+      <Filter>Source Files\ML</Filter>
+    </ClCompile>
+    <ClCompile Include="ML\NeuralNetwork\cArtificialNeuralNetworkAlgorithm.cpp">
+      <Filter>Source Files\ML\NeuralNetwork</Filter>
+    </ClCompile>
+    <ClCompile Include="ML\NeuralNetwork\cArtificialNeuralNetworkAlgorithm_v2.cpp">
+      <Filter>Source Files\ML\NeuralNetwork</Filter>
+    </ClCompile>
+    <ClCompile Include="ML\NeuralNetwork\cDeepNeuralNetworkAlgorithm.cpp">
+      <Filter>Source Files\ML\NeuralNetwork</Filter>
+    </ClCompile>
+    <ClCompile Include="ML\NeuralNetwork\cForwardNeuralNetworkAlgorithm.cpp">
+      <Filter>Source Files\ML\NeuralNetwork</Filter>
+    </ClCompile>
+    <ClCompile Include="ML\NeuralNetwork\cRestrictedBoltzmannMachineAlgorithm.cpp">
+      <Filter>Source Files\ML\NeuralNetwork</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="Core\Container\CMakeLists.txt">
+      <Filter>Header Files\Core\Container</Filter>
+    </Text>
+    <Text Include="Core\Mathematics\CMakeLists.txt">
+      <Filter>Header Files\Core\Mathematics</Filter>
+    </Text>
+  </ItemGroup>
+</Project>
